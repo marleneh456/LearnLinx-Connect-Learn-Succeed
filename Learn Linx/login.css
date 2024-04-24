@@ -1,0 +1,57 @@
+login{
+    width: 500px;
+    margin-left: 400px;
+	
+}
+.link{
+	text-align: center;
+}
+
+/* Login */
+#div_login{
+    border: 3px solid #483D8B;
+    width: 430px;
+    height: 470px;
+    margin: auto;
+}
+
+#div_login h1{
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: red;
+    font-family: sans-serif;
+	text-align: center;
+}
+
+#div_login div{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+#div_login #but_submit{
+    padding: 7px;
+    width: 100px;
+    background-color: #4B0082;
+    border: 0px;
+    color: white;
+}
+
+
+#div_reg div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+
+.registration-title
+{
+	text-align: center;
+}
+
+
+#div_reg #but_submit{
+    padding: 7px;
+    width: 100px;
+}

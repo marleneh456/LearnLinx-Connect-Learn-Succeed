@@ -1,3 +1,43 @@
+<?php
+session_start();
+
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$database = "learn-linx"; 
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+	// Check connection
+	
+	if (!$conn) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
+
+if (isset($_POST['but_submit'])) {
+    $uname = mysqli_real_escape_string($conn, $_POST['txt_uname']);
+    $password = $_POST['txt_pwd']; // No need to escape passwords before hashing
+
+    if ($uname != "" && $password != "") {
+        $sql_query = "SELECT * FROM users WHERE username = '$uname'";
+        $result = mysqli_query($conn, $sql_query);
+        $row = mysqli_fetch_array($result);
+
+        if ($row) {
+            if (password_verify($password, $row['password'])) {
+                $_SESSION['uname'] = $uname;
+                header('Location: dashboard.php');
+                exit;
+            } else {
+                echo "Invalid username and password";
+            }
+        } else {
+            echo "Invalid username and password";
+        }
+    }
+}
+?>
+    
 <html>
 <head>
     <title>Login</title>

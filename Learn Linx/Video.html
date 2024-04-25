@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Videos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar - Method 2 -->
+    <div class="navigationbar">
+        <img src="logo.png" alt="Learn Linx Logo">
+        <ul>
+            <li><a href="Home.html" target="_blank">Home</a></li>
+            <li><a href="Video.html" target="_self">Courses</a></li>
+            <li><a href="mailto:AlexMarch@LearnLinx.edu, HannahLynn@LearnLinx.edu, DemiRex@LearnLinx.edu, JohnDoe@LearnLinx.edu, TellyFawn@LearnLinx.com" target="_blank" >Support</a></li>
+            <li><a href="index.php" target="_blank">Login/Signup</a></li>
+        </ul>
+    </div>
+    
+    <br>
+    
+    <h1>Course Videos and Quizzes</h1>
+
+    <div class="button-container">
+        <button id="html">HTML</button>
+        <button id="css">CSS</button>
+        <button id="javascript">Javascript</button>
+    </div>
+
+    <div id="videoContainer"></div>
+
+    <div class="container">
+        <div id="quiz" class="quiz-container"></div>
+        <div id="result" class="result"></div>
+        <button id="submit" class="button">Submit</button>
+        <button id="retry" class="button hide">Retry</button>
+        <button id="showAnswer" class="button hide">Show Answer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

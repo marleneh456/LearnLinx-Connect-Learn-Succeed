@@ -1,4 +1,5 @@
-login{
+
+.login{
     width: 500px;
     margin-left: 400px;
 	
@@ -16,12 +17,12 @@ login{
 }
 
 #div_login h1{
+	text-align: center;
     margin-top: 0px;
     padding: 10px;
     background-color: #1E90FF;
-    color: red;
+    color: white;
     font-family: sans-serif;
-	text-align: center;
 }
 
 #div_login div{

@@ -1,3 +1,16 @@
+/* Base styles */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 40%, #2575fc 100%);
+}
+
 .background {
     position: absolute;
     width: 100%;
@@ -6,98 +19,86 @@
 }
 
 .blur {
-    filter: blur(10px); /* Example value */
+    filter: blur(8px);
     width: 100%;
-    height: auto;
+    height: 100%;
+    background: inherit; /* Ensures the blur effect inherits the parent's background */
 }
 
-.login{
-	position: relative;
+.login {
+    position: relative;
     z-index: 2;
-    width: 600px;
-    margin-left: 400px;
-	
-}
-.link{
-	text-align: center;
-}
-
-/* Login */
-#div_login{
-    border: 3px solid #483D8B;
-    width: 500px;
-    height: 600px;
-    margin: auto;
-	background-color: white;
+    width: 360px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-#div_login h1{
-	text-align: center;
-    margin-top: 0px;
-    padding: 10px;
+.link {
+    text-align: center;
+}
+
+/* Login and registration boxes */
+#div_login, #div_reg, #div_forgot {
+    border: 2px solid #483D8B;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#div_login h1, #div_reg h1, #div_forgot h1 {
+    margin-top: 0;
+    padding: 20px;
     background-color: #1E90FF;
     color: white;
-    font-family: sans-serif;
+    font-size: 24px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
-#div_login div{
+#div_login div, #div_reg div, #div_forgot div {
     margin-top: 10px;
-    padding: 5px;
-	text-align: center;
+    padding: 10px;
 }
 
-
-#div_login #but_submit{
-    padding: 7px;
-    width: 100px;
+/* Buttons */
+.button, #but_submit {
+    padding: 10px 15px;
+    width: auto; /* Allows the button to size according to its content */
     background-color: #4B0082;
-    border: 0px;
     color: white;
-}
-.reg, .forgot{
-	position: relative;
-    z-index: 2;
-    width: 500px;
-    margin-left: 400px;
-	
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
-#div_reg{
-    border: 3px solid #483D8B;
-    width: 480px;
-    height: 490px;
-    margin: auto;
-	background-color: white;
+.button:hover, #but_submit:hover {
+    background-color: #5a189a;
+    transform: scale(1.05);
 }
 
-#div_reg div{
-    margin-top: 5px;
-    padding: 5px;
-	text-align: center;
+/* Link styles for registration and forgot password */
+.reg, .forgot {
+    margin-top: 20px;
+    font-size: 14px;
 }
 
-.registration-title, .forgot-title
-{
-	text-align: center;
+.reg a, .forgot a {
+    color: #4B0082;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-
-#div_reg #but_submit{
-    padding: 7px;
-    width: 100px;
+.reg a:hover, .forgot a:hover {
+    color: #6a11cb;
 }
 
-#div_forgot{
-    border: 3px solid #483D8B;
-    width: 430px;
-    height: 470px;
-    margin: auto;
-	background-color: white;
+.registration-title, .forgot-title {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
 }
-
-#div_forgot div{
-    margin-top: 5px;
-    padding: 5px;
-	text-align: center;
-}
-

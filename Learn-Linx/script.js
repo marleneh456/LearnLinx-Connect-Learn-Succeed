@@ -3,14 +3,53 @@ $(document).ready(function () {
         showVideoAndQuiz('HTML', 'https://www.youtube.com/embed/qz0aGYrrlhU?si=uPa8lFjlrd2-nIRw');
     });
 
+    $('#html2').click(function () {
+        showVideoAndQuiz('HTML 2', 'https://www.youtube.com/embed/FQdaUv95mR8');
+    });
+
+    $('#html3').click(function () {
+        showVideoAndQuiz('HTML 3', 'https://www.youtube.com/embed/kUMe1FH4CHE');
+    });
+
+    $('#html4').click(function () {
+        showVideoAndQuiz('HTML 4', 'https://www.youtube.com/embed/916GWv2Qs08');
+    });
+
     $('#css').click(function () {
         showVideoAndQuiz('CSS', 'https://www.youtube.com/embed/1PnVor36_40?si=Uyv1sGlf6RlOBA-s');
+    });
+
+    $('#css2').click(function () {
+        showVideoAndQuiz('CSS 2', 'https://www.youtube.com/embed/wRNinF7YQqQ');
+    });
+
+    $('#css3').click(function () {
+        showVideoAndQuiz('CSS 3', 'https://www.youtube.com/embed/1Rs2ND1ryYc?si=zWCsBZImRUCbKBC7');
+    });
+
+    $('#css4').click(function () {
+        showVideoAndQuiz('CSS 4', 'https://www.youtube.com/embed/yfoY53QXEnI');
     });
 
     $('#javascript').click(function () {
         showVideoAndQuiz('JavaScript', 'https://www.youtube.com/embed/W6NZfCO5SIk?si=W-6Q25ao6Sphctbo');
     });
+
+    $('#javascript2').click(function () {
+        showVideoAndQuiz('JavaScript 2', 'https://www.youtube.com/embed/hdI2bqOjy3c');
+    });
+
+    $('#javascript3').click(function () {
+        showVideoAndQuiz('JavaScript 3', 'https://www.youtube.com/embed/lfmg-EJ8gm4');
+    });
+
+    $('#javascript4').click(function () {
+        showVideoAndQuiz('JavaScript 4', 'https://www.youtube.com/embed/E3XxeE7NF30');
+    });
 });
+
+
+
 
 function showVideoAndQuiz(subject, link) {
     const videoContainer = document.getElementById('videoContainer');
@@ -26,6 +65,8 @@ function getQuizDataBySubject(subject) {
     switch (subject) {
         case 'HTML':
             return htmlQuizData;
+        case 'HTML 2':
+            return html2QuizData;
         case 'CSS':
             return cssQuizData;
         case 'JavaScript':
@@ -168,14 +209,86 @@ function displayQuiz(quizData) {
     displayQuestion();
 }
 
+
 // HTML Quiz Data
 const htmlQuizData = [
     {
         question: 'What does HTML stand for?',
-        options: ['Hyper Text Markup Language', 'Hyperlinks and Text Markup Language', 'Home Tool Markup Language', 'Hyperlinks and Text Markup Link'],
-        answer: 'Hyper Text Markup Language',
+        options: [
+            'HyperText Markup Language',
+            'HyperTool Markup Language',
+            'HyperText Markdown Language',
+            'HyperTech Markup Language'
+        ],
+        answer: 'HyperText Markup Language'
     },
-    // Add more HTML quiz questions as needed
+    {
+        question: 'Which tool does the instructor recommend for writing HTML and CSS code in the tutorial?',
+        options: [
+            'Adobe Dreamweaver',
+            'Atom',
+            'Visual Studio Code',
+            'Sublime Text'
+        ],
+        answer: 'Visual Studio Code'
+    },
+    {
+        question: 'What is the purpose of the <strong> tag in HTML?',
+        options: [
+            'To change the font color to strong colors like red or blue',
+            'To indicate that the text is important and should be bolded',
+            'To add special effects to the text such as shadows',
+            'To insert images into the document'
+        ],
+        answer: 'To indicate that the text is important and should be bolded'
+    },
+    {
+        question: 'What does CSS stand for?',
+        options: [
+            'Cascading Style Sheets',
+            'Combined Styling Sheets',
+            'Computer Style Sheets',
+            'Creative Style Sheets'
+        ],
+        answer: 'Cascading Style Sheets'
+    },
+    {
+        question: 'Which extension does the instructor use in the tutorial to automatically refresh the web page upon saving the changes?',
+        options: [
+            'Prettier Code Formatter',
+            'Live Server',
+            'Auto Refresh',
+            'Quick HTML Viewer'
+        ],
+        answer: 'Live Server'
+    }
+];
+const html2QuizData = [
+    {
+        question: 'What is HTML an acronym for?',
+        options: ['Hyper Text Markup Language', 'High Text Markup Language', 'Hyper Tech Markup Language', 'Hyperlink Text Markup Language'],
+        answer: 'Hyper Text Markup Language'
+    },
+    {
+        question: 'According to Kevin, what is the basic building block of the web?',
+        options: ['JavaScript', 'CSS', 'HTML', 'SQL'],
+        answer: 'HTML'
+    },
+    {
+        question: 'What does Kevin suggest using to create an HTML website on your computer?',
+        options: ['Notepad', 'Adobe Dreamweaver', 'Microsoft Word', 'Visual Studio Code'],
+        answer: 'Notepad'
+    },
+    {
+        question: 'What browser does Kevin use to open the HTML file?',
+        options: ['Mozilla Firefox', 'Microsoft Edge', 'Google Chrome', 'Safari'],
+        answer: 'Microsoft Edge'
+    },
+    {
+        question: 'What is the purpose of the <h1> tag as demonstrated by Kevin?',
+        options: ['To create a link', 'To define a header', 'To insert an image', 'To write a paragraph'],
+        answer: 'To define a header'
+    }
 ];
 
 // CSS Quiz Data

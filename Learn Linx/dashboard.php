@@ -4,7 +4,7 @@ session_start();
 $servername = "localhost"; 
 $username = "root"; 
 $password = ""; 
-$database = "learn_linx"; 
+$database = "tutorial"; 
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -18,6 +18,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if(!isset($_SESSION['name'])){
     header('Location: index.php');
 }
+
 
 // Logout
 if (isset($_POST['but_logout'])) {
@@ -42,7 +43,8 @@ if (isset($_POST['but_logout'])) {
         <ul>
             <li><a href="dashboard.php" target = "_blank">Home</a></li>
             <li><a href="Video.html" target = "_self" >Courses</a></li>
-			<li><a href="mailto:email@example.com, secondemail@example.com, thirdemail@example.com, fourthmail@example.com, fifthmail@example.com" target="_blank" >Support</a></li>
+			<li><a href= "mailto:email@example.com, secondemail@example.com, thirdemail@example.com, fourthmail@example.com, fifthmail@example.com" target="_blank" >Support</a></li>
+            <li><a href="index.php" target = "_blank">Login/Signup</a></li>
         </ul>
     </div>
     

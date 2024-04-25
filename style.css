@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#videoContainer {
+    margin-top: 20px;
+}
+
+.container {
+  width: 450px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #3071a9;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
+
+/* Styles for the Navigation Bar */
+
+.navigationbar {
+    background-color: #191970;
+    padding: 5px;
+    display: flex;
+}
+
+.navigationbar img {
+    width: 180px;
+    margin-right: 520px; 
+}
+
+.navigationbar ul {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+}
+
+.navigationbar li {
+    font-family: 'Oswald';
+    padding: 10px;
+}
+
+.navigationbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px; 
+    background-color: #0234d2;
+}
+
+.navigationbar li a:hover {
+    background-color: #80b3ff;
+}

@@ -1,0 +1,103 @@
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.blur {
+    filter: blur(10px); /* Example value */
+    width: 100%;
+    height: auto;
+}
+
+.login{
+	position: relative;
+    z-index: 2;
+    width: 600px;
+    margin-left: 400px;
+	
+}
+.link{
+	text-align: center;
+}
+
+/* Login */
+#div_login{
+    border: 3px solid #483D8B;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_login h1{
+	text-align: center;
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    font-family: sans-serif;
+}
+
+#div_login div{
+    margin-top: 10px;
+    padding: 5px;
+	text-align: center;
+}
+
+
+#div_login #but_submit{
+    padding: 7px;
+    width: 100px;
+    background-color: #4B0082;
+    border: 0px;
+    color: white;
+}
+.reg, .forgot{
+	position: relative;
+    z-index: 2;
+    width: 500px;
+    margin-left: 400px;
+	
+}
+
+#div_reg{
+    border: 3px solid #483D8B;
+    width: 480px;
+    height: 490px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_reg div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+
+.registration-title, .forgot-title
+{
+	text-align: center;
+}
+
+
+#div_reg #but_submit{
+    padding: 7px;
+    width: 100px;
+}
+
+#div_forgot{
+    border: 3px solid #483D8B;
+    width: 430px;
+    height: 470px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_forgot div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+

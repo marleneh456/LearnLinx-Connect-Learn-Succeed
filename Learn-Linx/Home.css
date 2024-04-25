@@ -1,0 +1,58 @@
+/* Home.css */
+
+/* Styles for the Navigation Bar */
+
+.navigationbar {
+    background-color: #191970;
+    padding: 5px;
+    display: flex;
+}
+
+.navigationbar img {
+    width: 180px;
+    margin-right: 520px; 
+}
+
+.navigationbar ul {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+}
+
+.navigationbar li {
+    font-family: 'Oswald';
+    padding: 10px;
+}
+
+.navigationbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px; 
+    background-color: #0234d2;
+}
+
+.navigationbar li a:hover {
+    background-color: #80b3ff;
+}
+
+/* Styles for the Main Content */
+.main-content h1 {
+	text-align: center;
+	color: #4169E1;
+	font-family: 'Oswald';
+}
+
+.main-content p {
+	text-align: center;
+	color: #7366bd;
+	font-family: 'Oswald';
+}
+
+/* Styles for the Second Image*/
+.second-image{
+    text-align: center;
+}
+
+.second-image img {
+    width: 400px; 
+}

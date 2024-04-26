@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -41,6 +42,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 <head>
     <title>Login</title>
     <link href="login.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>

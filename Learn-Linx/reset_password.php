@@ -2,6 +2,7 @@
 <head>
     <title>Reset Password</title>
     <link href="login.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -45,7 +46,7 @@ if (isset($_POST['but_reset'])) {
 <div class="forgot">
     <form method="post" action="reset_password.php">
         <div id="div_forgot">
-		<h1 class="forgot-title">Forgot Password?</h1>
+		<h1 class="forgot-title">Reset Password</h1>
             <div>
                 <label for="txt_uname_email">Username or Email</label>
 				<br>
@@ -54,7 +55,7 @@ if (isset($_POST['but_reset'])) {
             </div>
 			<br>
             <div>
-                <label for="txt_pwd">New Password</label>
+                <label for="txt_new_pwd">New Password</label>
 				<br>
 				<br>
                 <input type="password" class="textbox" id="txt_pwd" name="txt_new_pwd" placeholder="New Password"/>
@@ -69,7 +70,7 @@ if (isset($_POST['but_reset'])) {
                 <p id="number" class="invalid">A <b>number</b></p>
 				<p id="length" class="invalid">At least <b>8 characters</b></p>
             </div>
-			
+			<br>
             <div>
                 <input type="submit" value="Reset" name="but_reset" id="but_reset" />
             </div>

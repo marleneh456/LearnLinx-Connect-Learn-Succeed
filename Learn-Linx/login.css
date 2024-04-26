@@ -1,104 +1,134 @@
-/* Base styles */
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb 40%, #2575fc 100%);
-}
-
 .background {
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: 1;
 }
 
 .blur {
-    filter: blur(8px);
+    filter: blur(15px); /* Example value */
     width: 100%;
-    height: 100%;
-    background: inherit; /* Ensures the blur effect inherits the parent's background */
 }
 
 .login {
     position: relative;
     z-index: 2;
-    width: 360px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-.link {
+.link{
+	text-align: center;
+}
+
+/* Login */
+#div_login{
+    border: 5px solid #483D8B;
+    width: 400px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_login h1 {
     text-align: center;
-}
-
-/* Login and registration boxes */
-#div_login, #div_reg, #div_forgot {
-    border: 2px solid #483D8B;
-    padding: 20px;
-    background-color: #FFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-#div_login h1, #div_reg h1, #div_forgot h1 {
     margin-top: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: #1E90FF;
     color: white;
-    font-size: 24px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    font-family: sans-serif;
 }
 
-#div_login div, #div_reg div, #div_forgot div {
+#div_login div {
     margin-top: 10px;
-    padding: 10px;
-}
-
-/* Buttons */
-.button, #but_submit {
-    padding: 10px 15px;
-    width: auto; /* Allows the button to size according to its content */
-    background-color: #4B0082;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.button:hover, #but_submit:hover {
-    background-color: #5a189a;
-    transform: scale(1.05);
-}
-
-/* Link styles for registration and forgot password */
-.reg, .forgot {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.reg a, .forgot a {
-    color: #4B0082;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.reg a:hover, .forgot a:hover {
-    color: #6a11cb;
-}
-
-.registration-title, .forgot-title {
+    padding: 5px;
     text-align: center;
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 15px;
 }
+
+
+#div_login #but_submit {
+    padding: 7px 15px;
+    background-color: #4B0082;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.reg, .forgot{
+	position: relative;
+    z-index: 2;
+    width: 500px;
+    margin-left: 400px;
+	
+}
+
+#div_reg{
+    border: 3px solid #483D8B;
+    width: 480px;
+    //height: 490px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_reg div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+
+.registration-title, .forgot-title
+{
+	text-align: center;
+}
+
+
+#div_reg #but_submit{
+    padding: 7px;
+    width: 100px;
+}
+
+#div_forgot{
+    border: 3px solid #483D8B;
+    width: 430px;
+    //height: 470px;
+    margin: auto;
+	background-color: white;
+}
+
+#div_forgot div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+#password-validation {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 3px;
+  margin-top: 3px;
+}
+
+#password-validation p {
+    padding: 10px;
+	font-size: 12px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -20px;
+    content: ' \2714';
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -20px;
+    content: ' \2716';
+}
+

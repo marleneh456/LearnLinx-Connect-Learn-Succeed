@@ -2,6 +2,7 @@
 <head>
     <title>Reset Password</title>
     <link href="login.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <?php
@@ -12,20 +13,21 @@ $username = "root";
 $password = ""; 
 $database = "learn_linx"; 
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+	// Check connection
+	
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
 
 if (isset($_POST['but_reset'])) {
-    $uname_email = mysqli_real_escape_string($conn, $_POST['txt_uname_email']);
-    $new_password = mysqli_real_escape_string($conn, $_POST['txt_new_pwd']);
+    $uname_email = htmlspecialchars($_POST['txt_uname_email']);
+    $new_password = htmlspecialchars($_POST['txt_new_pwd']);
 
-    // WARNING: Storing passwords as plain numbers is insecure
-    $new_password = preg_replace("/[^0-9]/", "", $new_password); // Store only the numbers from the password
+    $new_password = preg_replace("/[^a-zA-Z0-9]/", "", $new_password); // Store only the numbers from the password
 
-    $sql_query = "UPDATE users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
+    $sql_query = "UPDATE Users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
     $result = mysqli_query($conn, $sql_query);
 
     if (mysqli_affected_rows($conn) > 0) {
@@ -52,12 +54,22 @@ if (isset($_POST['but_reset'])) {
             </div>
 			<br>
             <div>
-                <label for="txt_new_pwd">New Password</label>
+                <label for="txt_pwd">New Password</label>
 				<br>
 				<br>
-                <input type="password" class="textbox" id="txt_new_pwd" name="txt_new_pwd" placeholder="New Password"/>
+                <input type="password" class="textbox" id="txt_pwd" name="txt_new_pwd" placeholder="New Password"/>
+				<br>
+				<br>
+				<input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">Show Password
             </div>
-			<br>
+			 <div id="password-validation">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+				<p id="length" class="invalid">At least <b>8 characters</b></p>
+            </div>
+			
             <div>
                 <input type="submit" value="Reset" name="but_reset" id="but_reset" />
             </div>
@@ -68,5 +80,6 @@ if (isset($_POST['but_reset'])) {
 	</div>		
     </form>
 </div>
+<script src="password-validation.js"></script>
 </body>
 </html>

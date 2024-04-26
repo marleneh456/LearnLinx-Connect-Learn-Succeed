@@ -7,16 +7,15 @@ USE LEARN_LINX;
 DROP TABLE IF EXISTS Users;
 
 CREATE TABLE Users (
-  id INT(20),
   username VARCHAR(30),
   name VARCHAR(30),
   password VARCHAR(100),
   email VARCHAR(100) -- Adding email column
-);
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO Users (id, username, name, password, email) 
+INSERT INTO Users (username, name, password, email) 
 
-VALUES(1, 'marleneh', 'Marlene Habib', '12345', 'marleneh@example.com'),
-	  (2, 'bsonarika', 'Sonarika Bhadoria', '12345', 'sonarika@example.com'),
-      (3, 'vishal', 'Vishal Sahu', '12345', 'vishal@example.com'),
-      (4, 'vijay', 'Vijay mourya', '12345', 'vijay@example.com');
+VALUES('marleneh', 'Marlene Habib', 'Pass12345', 'MarleneH@example.com'),
+	( 'johnnydoes', 'John Doe', 'Pass12345', 'JohnDoe@example.com'),
+      ( 'lillyPaddie', 'Lilly', 'Pass12345', 'LillyPad@example.com'),
+      ( 'AlexMarching', 'Alex March', 'Pass12345', 'AlexM@example.com');

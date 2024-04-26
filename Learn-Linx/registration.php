@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Registration</title>
-    <link rel="stylesheet" href="login.css"/>
+    <link href="login.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <?php
@@ -13,21 +15,22 @@ $username = "root";
 $password = ""; 
 $database = "learn_linx"; 
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database);
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+	// Check connection
+	
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
 
 if (isset($_POST['but_submit'])) {
-    $uname = mysqli_real_escape_string($conn, $_POST['txt_uname']);
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $password = mysqli_real_escape_string($conn, $_POST['txt_pwd']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = preg_replace("/[^0-9]/", "", $password); 
+    $uname = htmlspecialchars($_POST['txt_uname']);
+    $name = htmlspecialchars($_POST['name']);
+    $password = htmlspecialchars($_POST['txt_pwd']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = preg_replace("/[^a-zA-Z0-9]/", "", $password);
 
-    $query = "INSERT INTO `users` (username, name, password, email) VALUES ('$uname', '$name', '$password', '$email')";
+    $query = "INSERT INTO Users (username, name, password, email) VALUES ('$uname', '$name', '$password', '$email')";
     $result = mysqli_query($conn, $query);
     if ($result) {
         echo "<div class='form'>
@@ -71,18 +74,31 @@ if (isset($_POST['but_submit'])) {
             <label for="txt_pwd">Password</label>
 			<br>
 			<br>
-            <input type="password" class="textbox" id="txt_pwd" name="txt_pwd" placeholder="Password"/>
+            <input type="password" id="txt_pwd" name="txt_pwd" placeholder="Password" required/>
+			<br>
+			<br>
+			<input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">Show Password
         </div>
 		<br>
-        <div>
-            <input type="submit" value="Submit" name="but_submit" id="but_submit" />
+		<div id="password-validation">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+				<p id="length" class="invalid">At least <b>8 characters</b></p>
+            </div>
+            <div>
+                <input type="submit" value="Submit" name="but_submit" id="but_submit"/>
+            </div>
+             <p class="link">Already have an account? <a href="index.php">Login here</a></p>
         </div>
-        <p class="link">Already have an account? <a href="index.php">Login here</a></p>
-    </div>
     </form>
 <?php
 }
 ?>
 </div>
+
+<script src="password-validation.js"></script>
+
 </body>
 </html>

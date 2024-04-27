@@ -10,13 +10,14 @@
 
 .navigationbar img {
     width: 180px;
-    margin-right: 520px; 
+    margin-right: auto; /* Adjusted for automatic spacing */ 
 }
 
 .navigationbar ul {
     list-style-type: none;
     display: flex; 
     align-items: center; 
+	margin-left: auto; /* Adjusted for automatic spacing */
 }
 
 .navigationbar li {
@@ -29,6 +30,7 @@
     text-decoration: none;
     padding: 15px; 
     background-color: #0234d2;
+	border-radius: 5px; /* Rounded corners for links */
 }
 
 .navigationbar li a:hover {

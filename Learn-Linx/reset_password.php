@@ -31,12 +31,20 @@ if (isset($_POST['but_reset'])) {
     $sql_query = "UPDATE Users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
     $result = mysqli_query($conn, $sql_query);
 
-    if (mysqli_affected_rows($conn) > 0) {
-        echo "Password has been reset successfully.";
+    if ($result) {
+        // Password reset was successful
+        echo "<div class='form'>
+              <h1>Password has been reset successfully.</h1><br>
+              <p class='page-link'>Click here to <a href='index.php'>Login</a></p>
+              </div>";
     } else {
-        echo "Failed to reset password. Please check the username or email provided.";
+        // Password reset failed
+        echo "<div class='form'>
+              <h1>Failed to reset password. Please check the username or email provided.</h1><br>
+              <p class='page-link'>Click here to <a href='reset_password.php'>try again</a>.</p>
+              </div>";
     }
-}
+} else {
 ?>
 
 <div class="background">
@@ -80,6 +88,9 @@ if (isset($_POST['but_reset'])) {
 			</div>
 	</div>		
     </form>
+<?php
+}
+?>	
 </div>
 <script src="password-validation.js"></script>
 </body>

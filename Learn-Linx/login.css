@@ -21,6 +21,17 @@
 	text-align: center;
 }
 
+.form h1{
+	text-align: center;
+	color: green;
+	font-family: 'Overpass';
+}
+
+.page-link{
+	text-align: center;
+	font-family: 'Overpass';
+}
+
 .error {
     color: red;
 	text-align: center;

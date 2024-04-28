@@ -15,8 +15,8 @@ if (!$conn) {
 if (isset($_POST['but_submit'])) {
     $uname = htmlspecialchars($_POST['txt_uname']);
     $email = htmlspecialchars($_POST['txt_email']);
-	$password = $_POST['txt_pwd']; // Assuming this is the password entered by the user
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $password = $_POST['txt_pwd']; // Assuming this is the password entered by the user
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     if ($uname != "" && $password != "" && $email != "") {
         $sql_query = "SELECT * FROM Users WHERE username = '$uname' AND email = '$email'";
@@ -29,12 +29,15 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $_SESSION['name'] = $row['name'];
                 header('Location: dashboard.php');
                 exit;
+            } else {
+                echo "<p class='error'>Invalid Password! <br> Please Try Again!</p>";
             }
         } else {
             echo "<p class='error'>Invalid Username, Email or Password! <br> Please Try Again!</p>";
         }
     }
 }
+
 ?>
 <html>
 <head>

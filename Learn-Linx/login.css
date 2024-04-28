@@ -53,8 +53,9 @@
 
 
 #div_login #but_submit {
-    padding: 7px 15px;
-    background-color: #4B0082;
+    padding: 7px;
+	width: 100px;
+    background-color: #8A2BE2;
     border: none;
     color: white;
     cursor: pointer;
@@ -92,6 +93,11 @@
 #div_reg #but_submit{
     padding: 7px;
     width: 100px;
+	background-color: #d2691e;
+	border: none;
+	border: none;
+	color: white;
+	cursor: pointer;
 }
 
 #div_forgot{
@@ -118,6 +124,11 @@
 #div_forgot #but_reset{
     padding: 7px;
     width: 100px;
+	background-color: #8c8c8c;
+	border: none;
+	border: none;
+	color: white;
+	cursor: pointer;
 }
 	
 #password-validation {

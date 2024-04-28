@@ -21,6 +21,11 @@
 	text-align: center;
 }
 
+.error {
+    color: red;
+	text-align: center;
+}
+
 /* Login */
 #div_login{
     border: 3px solid #660066;

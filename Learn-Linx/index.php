@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -32,8 +31,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 exit;
             }
         } else {
-            echo "Invalid Login!";
-			echo "<br> Please Try Again!";
+            echo "<p class='error'>Invalid Username, Email or Password! <br> Please Try Again!</p>";
         }
     }
 }

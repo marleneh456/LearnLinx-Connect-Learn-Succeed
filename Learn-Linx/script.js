@@ -135,13 +135,15 @@ function checkAnswers(quizData) {
     submitButton.style.display = 'none'; // Hide submit button
 
     if (wrongAnswers.length > 0) {
-        var showAnswerButton = document.createElement('button');
-        showAnswerButton.textContent = 'Show Answers';
-        showAnswerButton.onclick = function () {
-            showAnswers(wrongAnswers, quizData);
-        };
-        resultContainer.appendChild(showAnswerButton);
-    }
+		var showAnswerButton = document.createElement('button');
+		showAnswerButton.textContent = 'Show Answers';
+		showAnswerButton.classList.add('button', 'show-answers-button'); // Add classes for button styling
+		showAnswerButton.onclick = function () {
+			showAnswers(wrongAnswers, quizData);
+		};
+		resultContainer.appendChild(showAnswerButton);
+	}
+
 }
 
 
@@ -169,12 +171,13 @@ function showAnswers(wrongAnswers, quizData) {
     resultContainer.appendChild(incorrectAnswersList);
 
     // Create and append the retry button to the result container
-    var retryButton = document.createElement('button');
-    retryButton.textContent = 'Retry';
-    retryButton.onclick = function () {
-        displayQuiz(quizData); // Redisplay the quiz
-    };
-    resultContainer.appendChild(retryButton);
+	var retryButton = document.createElement('button');
+	retryButton.textContent = 'Retry';
+	retryButton.classList.add('button', 'retry-button'); // Add classes for button styling
+	retryButton.onclick = function () {
+		displayQuiz(quizData); // Redisplay the quiz
+	};
+	resultContainer.appendChild(retryButton);
 }
 
 

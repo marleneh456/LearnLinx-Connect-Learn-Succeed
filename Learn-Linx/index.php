@@ -91,6 +91,7 @@ if (isset($_POST['but_submit'])) {
             </div>
             <p class="link">Don't have an account? <a href="registration.php">Register Now</a></p>
             <p class="link">Forgot<a href="reset_password.php"> password?</a></p>
+			<p class="link">Go to the <a href="Home.html"> Home Page.</a></p>
         </div>
     </form>
 </div>

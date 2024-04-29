@@ -629,10 +629,10 @@ const js3QuizData = [
             'Converts a string to a number',
             'Converts a number to a string'
         ],
-        answer: '4. Checks if a value is not a number'
+        answer: 'Checks if a value is not a number'
     },
     {
-        question: 'Which JavaScript method is used to join all elements of an array into a string?',
+        question: '4. Which JavaScript method is used to join all elements of an array into a string?',
         options: ['join()', 'concat()', 'toString()', 'map()'],
         answer: 'join()'
     },

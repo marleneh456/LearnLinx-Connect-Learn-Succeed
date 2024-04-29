@@ -37,7 +37,7 @@ if (isset($_POST['but_logout'])) {
 </head>
 <body>
     
-    <!-- Navigation Bar - Method 2 -->
+    <!-- Navigation Bar -->
     <div class="navigationbar">
 	<img src="logo.png" alt="Learn Linx Logo">
         <ul>
@@ -71,7 +71,7 @@ if (isset($_POST['but_logout'])) {
 	</div>
 		<p>
 		If you have any questions about this websites.
-		Feel Free to contract any one of us!
+		Feel Free to contact any one of us!
 		</p>
 </div>
 	<!-- Bookmark to go the top -->     

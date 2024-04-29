@@ -13,7 +13,7 @@
     position: relative;
     z-index: 2;
     width: 500px;
-    margin-left: 400px;
+    margin-left: 380px;
 }
 
 .link{
@@ -35,6 +35,12 @@
     color: red;
 	text-align: center;
 }
+
+.error-field h1{
+	color: red;
+	text-align: center;
+	font-family: 'Overpass';
+}	
 
 /* Login */
 #div_login{
@@ -74,7 +80,7 @@
 	position: relative;
     z-index: 2;
     width: 500px;
-    margin-left: 400px;
+    margin-left: 380px;
 	
 }
 

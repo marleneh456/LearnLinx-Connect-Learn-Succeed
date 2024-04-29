@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(to right, #0458B3, #6287AF);
+  background: linear-gradient(to right, #396a93, #00ccff);
   color: #fff; /* Ensures text is readable on the dark background */
 }
 
@@ -74,40 +74,38 @@ h1 {
   box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
 }
 
-#submit-answers {
-  background-color: #4CAF50; /* Green */
-  color: white;
-  border: none;
-}
-
-#submit-answers:hover {
-  background-color: #45a049;
-}
 
 #result button.retry-button {
-  background-color: #f44336; /* Red */
+  background-color: #d2143a; /* Red */
   color: white;
   border: none;
-  font-size: 20px; /* Increase font size */
   padding: 15px 30px; /* Increase padding for a bigger button */
   border-radius: 10px; /* Rounded corners */
+}
+
+#result button.retry-button:hover {
+	background-color: #f6a2b3;
 }
 
 #result button.show-answers-button {
-  background-color: #8bc34a; /* Light green */
+  background-color: #77ac39;
   color: white;
   border: none;
-  font-size: 20px; /* Increase font size */
   padding: 15px 30px; /* Increase padding for a bigger button */
   border-radius: 10px; /* Rounded corners */
 }
 
+#result button.show-answers-button:hover {
+	background-color: #a9d279;
+}
+	
 #quiz .button {
-  background-color: #008CBA; /* Blue */
+  color: white;	
+  background-color: #002080; 
 }
 
 #quiz .button:hover {
-  background-color: #006080;
+  background-color: #9999ff;
 }
 
 /* Styles for the Navigation Bar */

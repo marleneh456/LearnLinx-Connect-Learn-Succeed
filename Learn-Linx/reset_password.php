@@ -28,20 +28,26 @@ if (isset($_POST['but_reset'])) {
 
     $new_password = preg_replace("/[^a-zA-Z0-9]/", "", $new_password); // Store only the numbers from the password
 
-    $sql_query = "UPDATE Users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
+    $sql_query = "SELECT * FROM Users WHERE username = '$uname_email' OR email = '$uname_email'";
     $result = mysqli_query($conn, $sql_query);
 
-    if ($result) {
-        // Password reset was successful
-        echo "<div class='form'>
-              <h1>Password has been reset successfully.</h1><br>
-              <p class='page-link'>Click here to <a href='index.php'>Login</a></p>
-              </div>";
+    if (mysqli_num_rows($result) > 0) {
+        // Username or email found in the database
+        $sql_query = "UPDATE Users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
+        $result = mysqli_query($conn, $sql_query);
+
+        if ($result) {
+            // Password reset was successful
+            echo "<div class='form'>
+                  <h1>Password has been reset successfully.</h1><br>
+                  <p class='page-link'>Click here to <a href='index.php'>Login</a></p>
+                  </div>";
+        }
     } else {
-        // Password reset failed
-        echo "<div class='form'>
-              <h1>Failed to reset password. Please check the username or email provided.</h1><br>
-              <p class='page-link'>Click here to <a href='reset_password.php'>try again</a>.</p>
+        // Username or email not found in the database
+        echo "<div class='error-field'>
+              <h1>Invalid username or email. <br> Please try again.</h1><br>
+			  <p class='page-link'>Click here to <a href='reset_password.php'>reset the password </a> again.</p>
               </div>";
     }
 } else {

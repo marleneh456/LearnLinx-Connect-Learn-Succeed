@@ -84,15 +84,22 @@ h1 {
   background-color: #45a049;
 }
 
-#result button {
-  margin-top: 10px;
+#result button.retry-button {
   background-color: #f44336; /* Red */
   color: white;
   border: none;
+  font-size: 20px; /* Increase font size */
+  padding: 15px 30px; /* Increase padding for a bigger button */
+  border-radius: 10px; /* Rounded corners */
 }
 
-#result button:hover {
-  background-color: #da190b;
+#result button.show-answers-button {
+  background-color: #8bc34a; /* Light green */
+  color: white;
+  border: none;
+  font-size: 20px; /* Increase font size */
+  padding: 15px 30px; /* Increase padding for a bigger button */
+  border-radius: 10px; /* Rounded corners */
 }
 
 #quiz .button {

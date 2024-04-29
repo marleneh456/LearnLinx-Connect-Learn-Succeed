@@ -352,7 +352,7 @@ const cssQuizData = [
         answer: 'Cascading Style Sheets',
     },
     {
-        question: '2. What does the <link> element in HTML primarily do?',
+        question: '2. What does the "link" element in HTML primarily do?',
         options: [
             'Define a header',
             'Create a link to an external resource',

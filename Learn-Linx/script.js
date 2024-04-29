@@ -60,8 +60,16 @@ function getQuizDataBySubject(subject) {
     var quizzes = {
         'HTML': htmlQuizData,
         'HTML 2': html2QuizData,
+        'HTML 3': html3QuizData,
+        'HTML 4': html4QuizData,
         'CSS': cssQuizData,
-        'JavaScript': jsQuizData
+        'CSS 2': css2QuizData,
+        'CSS 3': css3QuizData,
+        'CSS 4': css4QuizData,
+        'JavaScript': jsQuizData,
+        'JavaScript 2': js2QuizData,
+        'JavaScript 3': js3QuizData,
+        'JavaScript 4': js4QuizData
     };
     return quizzes[subject] || [];
 }
@@ -252,6 +260,87 @@ const html2QuizData = [
     }
 ];
 
+const html3QuizData = [
+    {
+        question: '1. What is the purpose of the <img> element in HTML, as demonstrated by Kevin in the video tutorial at this link?',
+        options: [
+            'To create a link',
+            'To define a header',
+            'To insert an image',
+            'To write a paragraph'
+        ],
+        answer: 'To insert an image'
+    },
+    {
+        question: '2. Which HTML tag is used to create a hyperlink?',
+        options: ['<link>', '<a>', '<href>', '<url>'],
+        answer: '<a>'
+    },
+    {
+        question: '3. What does the acronym "HTML" stand for?',
+        options: [
+            'Hyper Text Markup Language',
+            'High Text Markup Language',
+            'Hyper Tech Markup Language',
+            'Hyperlink Text Markup Language'
+        ],
+        answer: 'Hyper Text Markup Language'
+    },
+    {
+        question: '4. Which HTML tag is used to define the main heading of a webpage?',
+        options: ['<h1>', '<header>', '<main>', '<title>'],
+        answer: '<h1>'
+    },
+    {
+        question: '5. What is the purpose of the <p> tag in HTML?',
+        options: [
+            'To create a link',
+            'To define a paragraph',
+            'To insert an image',
+            'To write a header'
+        ],
+        answer: 'To define a paragraph'
+    }
+];
+
+const html4QuizData = [
+    {
+        question: '1. What does the <meta> tag in HTML primarily do?',
+        options: [
+            'Define a header',
+            'Create a link to an external resource',
+            'Insert metadata about the document',
+            'Write a paragraph'
+        ],
+        answer: 'Insert metadata about the document'
+    },
+    {
+        question: '2. Which HTML tag is used to create an ordered list?',
+        options: ['<ul>', '<ol>', '<li>', '<dl>'],
+        answer: '<ol>'
+    },
+    {
+        question: '3. What does the <a> tag in HTML represent?',
+        options: ['Anchor', 'Article', 'Audio', 'Abbreviation'],
+        answer: 'Anchor'
+    },
+    {
+        question: '4. What is the purpose of the <table> element in HTML?',
+        options: [
+            'To create a form',
+            'To define a table structure',
+            'To insert an image',
+            'To write a paragraph'
+        ],
+        answer: 'To define a table structure'
+    },
+    {
+        question: '5. Which HTML attribute specifies an alternative text for an image?',
+        options: ['alt', 'src', 'href', 'title'],
+        answer: 'alt'
+    }
+];
+
 // CSS Quiz Data
 const cssQuizData = [
     {
@@ -259,15 +348,343 @@ const cssQuizData = [
         options: ['Computer Style Sheets', 'Colorful Style Sheets', 'Cascading Style Sheets', 'Creative Style Sheets'],
         answer: 'Cascading Style Sheets',
     },
-    // Add more CSS quiz questions as needed
+    {
+        question: '2. What does the <link> element in HTML primarily do?',
+        options: [
+            'Define a header',
+            'Create a link to an external resource',
+            'Insert metadata about the document',
+            'Write a paragraph'
+        ],
+        answer: 'Create a link to an external resource'
+    },
+    {
+        question: '3. Which CSS property is used to change the font size of text?',
+        options: ['font-family', 'font-weight', 'font-size', 'font-style'],
+        answer: 'font-size'
+    },
+    {
+        question: '4. What does the margin property in CSS control?',
+        options: [
+            'Text alignment',
+            'Background color',
+            'Spacing outside an element',
+            'Border style'
+        ],
+        answer: 'Spacing outside an element'
+    },
+    {
+        question: '5. What does the background-color property in CSS define?',
+        options: [
+            'Text color',
+            'Border color',
+            'Background color of an element',
+            'Font style'
+        ],
+        answer: 'Background color of an element'
+    }
 ];
+
+const css2QuizData = [
+    {
+        question: '1. What does the margin property in CSS control?',
+        options: [
+            'Text alignment',
+            'Background color',
+            'Spacing outside an element',
+            'Border style'
+        ],
+        answer: 'Spacing outside an element'
+    },
+    {
+        question: '2. Which CSS property is used to change the font size of text?',
+        options: ['font-family', 'font-weight', 'font-size', 'font-style'],
+        answer: 'font-size'
+    },
+    {
+        question: '3. What does the background-color property in CSS define?',
+        options: [
+            'Text color',
+            'Border color',
+            'Background color of an element',
+            'Font style'
+        ],
+        answer: 'Background color of an element'
+    },
+    {
+        question: '4. What is the purpose of the display: flex; property in CSS?',
+        options: [
+            'To create a link',
+            'To define a header',
+            'To create a flexible layout',
+            'To write a paragraph'
+        ],
+        answer: 'To create a flexible layout'
+    },
+    {
+        question: '5. Which CSS selector targets all <p> elements with a class of “highlight”?',
+        options: ['.highlight p', 'p.highlight', '#highlight p', '.highlight > p'],
+        answer: 'p.highlight'
+    }
+];
+
+const css3QuizData = [
+    {
+        question: '1. What does the CSS property "float" do?',
+        options: [
+            'Aligns text vertically',
+            'Positions an element to the left or right of its container',
+            'Changes font style',
+            'Sets the opacity of an element'
+        ],
+        answer: '2. Positions an element to the left or right of its container'
+    },
+    {
+        question: 'Which CSS property is used to add space between elements?',
+        options: ['padding', 'margin', 'border', 'width'],
+        answer: 'margin'
+    },
+    {
+        question: '3. What does the CSS property "position" control?',
+        options: [
+            'Text alignment',
+            'Element visibility',
+            'Element stacking order',
+            'Font size'
+        ],
+        answer: 'Element stacking order'
+    },
+    {
+        question: '4. Which CSS value is used to make an element transparent?',
+        options: ['transparent', 'visible', 'hidden', 'opacity'],
+        answer: 'opacity'
+    },
+    {
+        question: '5. What does the CSS property "box-sizing" determine?',
+        options: [
+            'Element dimensions including padding and border',
+            'Element position',
+            'Element background color',
+            'Element font style'
+        ],
+        answer: 'Element dimensions including padding and border'
+    }
+];
+
+const css4QuizData = [
+    {
+        question: '1. What does the CSS property "display" control?',
+        options: [
+            'Element visibility',
+            'Element stacking order',
+            'Element dimensions',
+            'Element font style'
+        ],
+        answer: 'Element dimensions'
+    },
+    {
+        question: '2. Which CSS selector targets all <h2> elements within a class of "section"?',
+        options: ['h2.section', '.section h2', '#section h2', 'section > h2'],
+        answer: '.section h2'
+    },
+    {
+        question: '3. What does the CSS property "border-radius" define?',
+        options: [
+            'Element border color',
+            'Element border width',
+            'Element border style',
+            'Element corner curvature'
+        ],
+        answer: 'Element corner curvature'
+    },
+    {
+        question: '4. Which CSS value is used to create a shadow effect for an element?',
+        options: ['shadow', 'box-shadow', 'text-shadow', 'element-shadow'],
+        answer: 'box-shadow'
+    },
+    {
+        question: '5. What does the CSS property "z-index" control?',
+        options: [
+            'Element visibility',
+            'Element stacking order',
+            'Element dimensions',
+            'Element font style'
+        ],
+        answer: 'Element stacking order'
+    }
+];
+
 
 // JavaScript Quiz Data
 const jsQuizData = [
     {
-        question: '1. Which one of these is a JavaScript package manager?',
-        options: ['Node.js', 'TypeScript', 'npm', 'ESLint'],
-        answer: 'npm',
+        question: '1. What does the JavaScript method "querySelector()" do?',
+        options: [
+            'Selects the first element that matches a specified CSS selector',
+            'Selects all elements that match a specified CSS selector',
+            'Selects the last element that matches a specified CSS selector',
+            'Selects the parent element of a specified CSS selector'
+        ],
+        answer: 'Selects the first element that matches a specified CSS selector'
     },
-    // Add more JavaScript quiz questions as needed
+    {
+        question: '2. Which JavaScript method is used to add a new item to the end of an array?',
+        options: ['push()', 'unshift()', 'append()', 'addToEnd()'],
+        answer: 'push()'
+    },
+    {
+        question: '3. What does the JavaScript function "parseInt()" do?',
+        options: [
+            'Converts a string to a floating-point number',
+            'Converts a string to an integer',
+            'Rounds a number to the nearest integer',
+            'Returns the length of a string'
+        ],
+        answer: 'Converts a string to an integer'
+    },
+    {
+        question: '4. Which JavaScript operator is used to compare the equality of two values without considering their data types?',
+        options: ['==', '===', '!=', '!=='],
+        answer: '=='
+    },
+    {
+        question: '5. What does the JavaScript method "addEventListener()" do?',
+        options: [
+            'Adds an event listener to an HTML element',
+            'Removes an event listener from an HTML element',
+            'Triggers an event on an HTML element',
+            'Creates a new event listener object'
+        ],
+        answer: 'Adds an event listener to an HTML element'
+    }
 ];
+
+const js2QuizData = [
+    {
+        question: '1. What does the JavaScript keyword "const" do?',
+        options: [
+            'Declares a constant variable that cannot be reassigned',
+            'Declares a variable with block scope',
+            'Declares a variable that can be reassigned',
+            'Declares a variable with global scope'
+        ],
+        answer: 'Declares a constant variable that cannot be reassigned'
+    },
+    {
+        question: '2. Which JavaScript method is used to remove the last item from an array?',
+        options: ['pop()', 'shift()', 'slice()', 'removeLast()'],
+        answer: 'pop()'
+    },
+    {
+        question: '3. What does the JavaScript function "parseFloat()" do?',
+        options: [
+            'Converts a string to a floating-point number',
+            'Converts a string to an integer',
+            'Rounds a number to the nearest integer',
+            'Returns the length of a string'
+        ],
+        answer: 'Converts a string to a floating-point number'
+    },
+    {
+        question: '4. Which JavaScript operator is used to compare the value and type of two variables?',
+        options: ['==', '===', '!=', '!=='],
+        answer: '==='
+    },
+    {
+        question: '5. What does the JavaScript method "setTimeout()" do?',
+        options: [
+            'Delays the execution of a function by a specified number of milliseconds',
+            'Executes a function immediately',
+            'Repeats the execution of a function at specified intervals',
+            'Clears the timeout set by setTimeout()'
+        ],
+        answer: 'Delays the execution of a function by a specified number of milliseconds'
+    }
+];
+
+const js3QuizData = [
+    {
+        question: '1. What does the JavaScript operator "===" do?',
+        options: [
+            'Checks if two values are equal in value and type',
+            'Checks if two values are equal in value but not necessarily in type',
+            'Checks if two values are not equal in value and type',
+            'Checks if two values are not equal in value but not necessarily in type'
+        ],
+        answer: 'Checks if two values are equal in value and type'
+    },
+    {
+        question: '2. Which JavaScript method is used to add elements to the beginning of an array?',
+        options: ['unshift()', 'push()', 'concat()', 'prepend()'],
+        answer: 'unshift()'
+    },
+    {
+        question: '3. What does the JavaScript function "isNaN()" do?',
+        options: [
+            'Checks if a value is a number',
+            'Checks if a value is not a number',
+            'Converts a string to a number',
+            'Converts a number to a string'
+        ],
+        answer: '4. Checks if a value is not a number'
+    },
+    {
+        question: 'Which JavaScript method is used to join all elements of an array into a string?',
+        options: ['join()', 'concat()', 'toString()', 'map()'],
+        answer: 'join()'
+    },
+    {
+        question: '5. What does the JavaScript method "addEventListener()" do?',
+        options: [
+            'Adds an event listener to an HTML element',
+            'Removes an event listener from an HTML element',
+            'Triggers an event on an HTML element',
+            'Creates a new event listener object'
+        ],
+        answer: 'Adds an event listener to an HTML element'
+    }
+];
+
+const js4QuizData = [
+    {
+        question: '1. What does the JavaScript operator "typeof" do?',
+        options: [
+            'Returns the type of a variable or expression',
+            'Compares the type and value of two variables',
+            'Checks if a variable is undefined',
+            'Converts a variable to a specific type'
+        ],
+        answer: 'Returns the type of a variable or expression'
+    },
+    {
+        question: '2. Which JavaScript method is used to remove the first item from an array?',
+        options: ['shift()', 'pop()', 'slice()', 'removeFirst()'],
+        answer: 'shift()'
+    },
+    {
+        question: '3. What does the JavaScript function "isNaN()" do?',
+        options: [
+            'Checks if a value is not a number',
+            'Checks if a value is a number',
+            'Converts a string to a number',
+            'Converts a number to a string'
+        ],
+        answer: 'Checks if a value is not a number'
+    },
+    {
+        question: '4. Which JavaScript method is used to remove elements from an array and, if necessary, replace them with new elements?',
+        options: ['splice()', 'slice()', 'filter()', 'remove()'],
+        answer: 'splice()'
+    },
+    {
+        question: '5. What does the JavaScript method "querySelector()" do?',
+        options: [
+            'Selects the first element that matches a specified CSS selector',
+            'Selects all elements that match a specified CSS selector',
+            'Selects the last element that matches a specified CSS selector',
+            'Selects the parent element of a specified CSS selector'
+        ],
+        answer: 'Selects the first element that matches a specified CSS selector'
+    }
+];
+

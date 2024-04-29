@@ -202,7 +202,7 @@ const htmlQuizData = [
         answer: 'Visual Studio Code'
     },
     {
-        question: '3. What is the purpose of the <strong> tag in HTML?',
+        question: '3. What is the purpose of the strong tag in HTML?',
         options: [
             'To change the font color to strong colors like red or blue',
             'To indicate that the text is important and should be bolded',
@@ -254,7 +254,7 @@ const html2QuizData = [
         answer: 'Microsoft Edge'
     },
     {
-        question: '5. What is the purpose of the <h1> tag as demonstrated by Kevin?',
+        question: '5. What is the purpose of the "h1" tag as demonstrated by Kevin?',
         options: ['To create a link', 'To define a header', 'To insert an image', 'To write a paragraph'],
         answer: 'To define a header'
     }
@@ -262,7 +262,7 @@ const html2QuizData = [
 
 const html3QuizData = [
     {
-        question: '1. What is the purpose of the <img> element in HTML, as demonstrated by Kevin in the video tutorial at this link?',
+        question: '1. What is the purpose of the "img" element in HTML, as demonstrated by Kevin in the video tutorial at this link?',
         options: [
             'To create a link',
             'To define a header',
@@ -273,8 +273,8 @@ const html3QuizData = [
     },
     {
         question: '2. Which HTML tag is used to create a hyperlink?',
-        options: ['<link>', '<a>', '<href>', '<url>'],
-        answer: '<a>'
+        options: ['"link" tag', '"a" tag', '"href" tag', '"url" tag'],
+        answer: '"a" tag'
     },
     {
         question: '3. What does the acronym "HTML" stand for?',
@@ -288,11 +288,11 @@ const html3QuizData = [
     },
     {
         question: '4. Which HTML tag is used to define the main heading of a webpage?',
-        options: ['<h1>', '<header>', '<main>', '<title>'],
-        answer: '<h1>'
+        options: ['"h1" tag', '"header" tag', '"main" tag', '"title" tag'],
+        answer: '"h1" tag'
     },
     {
-        question: '5. What is the purpose of the <p> tag in HTML?',
+        question: '5. What is the purpose of the "p" tag in HTML?',
         options: [
             'To create a link',
             'To define a paragraph',
@@ -305,7 +305,7 @@ const html3QuizData = [
 
 const html4QuizData = [
     {
-        question: '1. What does the <meta> tag in HTML primarily do?',
+        question: '1. What does the "meta" tag in HTML primarily do?',
         options: [
             'Define a header',
             'Create a link to an external resource',
@@ -316,16 +316,16 @@ const html4QuizData = [
     },
     {
         question: '2. Which HTML tag is used to create an ordered list?',
-        options: ['<ul>', '<ol>', '<li>', '<dl>'],
-        answer: '<ol>'
+        options: ['"ul" tag', '"ol" tag', '"li" tag', '"dl" tag'],
+        answer: '"ol" tag'
     },
     {
-        question: '3. What does the <a> tag in HTML represent?',
+        question: '3. What does the "a" tag in HTML represent?',
         options: ['Anchor', 'Article', 'Audio', 'Abbreviation'],
         answer: 'Anchor'
     },
     {
-        question: '4. What is the purpose of the <table> element in HTML?',
+        question: '4. What is the purpose of the "table" element in HTML?',
         options: [
             'To create a form',
             'To define a table structure',
@@ -422,7 +422,7 @@ const css2QuizData = [
         answer: 'To create a flexible layout'
     },
     {
-        question: '5. Which CSS selector targets all <p> elements with a class of “highlight”?',
+        question: '5. Which CSS selector targets all "p" elements with a class of highlight?',
         options: ['.highlight p', 'p.highlight', '#highlight p', '.highlight > p'],
         answer: 'p.highlight'
     }
@@ -440,7 +440,7 @@ const css3QuizData = [
         answer: '2. Positions an element to the left or right of its container'
     },
     {
-        question: 'Which CSS property is used to add space between elements?',
+        question: '2. Which CSS property is used to add space between elements?',
         options: ['padding', 'margin', 'border', 'width'],
         answer: 'margin'
     },
@@ -483,7 +483,7 @@ const css4QuizData = [
         answer: 'Element dimensions'
     },
     {
-        question: '2. Which CSS selector targets all <h2> elements within a class of "section"?',
+        question: '2. Which CSS selector targets all "h2" elements within a class of "section"?',
         options: ['h2.section', '.section h2', '#section h2', 'section > h2'],
         answer: '.section h2'
     },
@@ -687,4 +687,3 @@ const js4QuizData = [
         answer: 'Selects the first element that matches a specified CSS selector'
     }
 ];
-

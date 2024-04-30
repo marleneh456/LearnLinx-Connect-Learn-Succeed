@@ -1,7 +1,8 @@
 <!-- Update reset_password.php -->
 
-<!-- This is for the user who forgot their password  and store the password correctly-->
+<!-- This is for the user who forgot their password and store the password correctly-->
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Reset Password</title>

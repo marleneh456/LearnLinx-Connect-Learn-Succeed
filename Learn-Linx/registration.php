@@ -1,3 +1,7 @@
+<!-- Update registration.php -->
+
+<!-- Where I store the password correctly after creating new account -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,7 +60,7 @@ if (isset($_POST['but_submit'])) {
                   </div>";
         }
     }
-}
+} else {
 ?>
 
 <div class="background">
@@ -95,12 +99,24 @@ if (isset($_POST['but_submit'])) {
                 <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">Show Password
             </div>
             <br>
+			
+			 <div id="password-validation">
+                <h3>Password must contain the following:</h3>
+				<p id="capital" class="invalid">A <b>uppercase</b> letter</p>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+				<p id="length" class="invalid">At least <b>8 characters</b></p>
+            </div>
+		
             <div>
                 <input type="submit" value="Submit" name="but_submit" id="but_submit"/>
             </div>
             <p class="link">Already have an account? <a href="index.php">Login here</a></p>
         </div>
     </form>
+<?php
+}
+?>	
 </div>
 
 <script src="password-validation.js"></script>

@@ -148,3 +148,36 @@ h1 {
 .navigationbar li a:hover {
   background-color: #80b3ff;
 }
+
+#note-taking-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#editor-container {
+  height: 300px; /* Adjust height as needed */
+  background-color: #333; /* Dark background for better contrast */
+  color: #fff; /* Light color for text */
+}
+
+/* Ensuring text color within the editor is light */
+.ql-container {
+  color: #fff; /* White text color for better readability */
+}
+
+/* Adjust button styles for better visibility */
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+

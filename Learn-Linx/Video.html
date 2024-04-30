@@ -4,13 +4,16 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Course Videos and Quizzes</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<a id="top"></a>
-</head>
+    <head>
+        <title>Course Videos and Quizzes</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+        <script src="note-taking.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <a id="top"></a>
+    </head>
 <body>
     <!-- Navigation Bar -->
     <div class="navigationbar">
@@ -46,6 +49,15 @@
         <div id="quiz" class="quiz-container"></div>
         <div id="result" class="result"></div>
     </div>
+
+     <!-- Note Taking Section -->
+     <div id="note-taking-container">
+        <div id="editor-container" style="height: 300px;"></div>
+        <button onclick="downloadNote()">Download Notes</button>
+    </div>
+
+
+    
     <script src="script.js"></script>
 	<br>
 	<!-- Bookmark to go the top -->     

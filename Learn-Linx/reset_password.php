@@ -1,6 +1,6 @@
-<!-- reset_password.php -->
+<!-- Update reset_password.php -->
 
-<!-- This is for the user who forgot their password -->
+<!-- This is for the user who forgot their password  and store the password correctly-->
 
 <html>
 <head>
@@ -23,8 +23,8 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 	
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if (isset($_POST['but_reset'])) {
@@ -32,7 +32,9 @@ if (isset($_POST['but_reset'])) {
     $new_password = htmlspecialchars($_POST['txt_new_pwd']);
 
     $new_password = preg_replace("/[^a-zA-Z0-9]/", "", $new_password); // Store only the numbers from the password
-
+	
+	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+	
     $sql_query = "SELECT * FROM Users WHERE username = '$uname_email' OR email = '$uname_email'";
     $result = mysqli_query($conn, $sql_query);
 

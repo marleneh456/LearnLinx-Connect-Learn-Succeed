@@ -1,4 +1,4 @@
-//note-taking
+//note-taking.js
 
 // This where to load Notepad 
 

@@ -1,3 +1,7 @@
+//note-taking
+
+// This where to load Notepad 
+
 document.addEventListener('DOMContentLoaded', function () {
     var quill = new Quill('#editor-container', {
         theme: 'snow'

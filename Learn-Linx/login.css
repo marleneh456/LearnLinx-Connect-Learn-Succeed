@@ -1,0 +1,187 @@
+/* login.css */
+
+/* Styles for the login, registration, and reset password page */
+
+.background {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.blur {
+    filter: blur(15px); /* Example value */
+    width: 100%;
+}
+
+.login {
+    position: relative;
+    z-index: 2;
+    width: 500px;
+    margin-left: 380px;
+}
+
+.link{
+	text-align: center;
+}
+
+.form h1{
+	text-align: center;
+	color: green;
+	font-family: 'Overpass';
+}
+
+.page-link{
+	text-align: center;
+	font-family: 'Overpass';
+}
+
+.error {
+    color: red;
+	text-align: center;
+}
+
+.error-field h1{
+	color: red;
+	text-align: center;
+	font-family: 'Overpass';
+}	
+
+/* Login */
+#div_login{
+    border: 3px solid #660066;
+    width: 400px;
+	background-color: white;
+}
+
+#div_login h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    font-family: 'Overpass';
+}
+#div_login p{
+	text-align: center;
+}
+
+#div_login div {
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+#div_login #but_submit {
+    padding: 7px;
+	width: 100px;
+    background-color: #8A2BE2;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.reg, .forgot{
+	position: relative;
+    z-index: 2;
+    width: 500px;
+    margin-left: 380px;
+	
+}
+
+#div_reg{
+    border: 3px solid #ffc266;
+    width: 400px;
+	background-color: white;
+}
+
+#div_reg div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+
+#div_reg h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #DAA520;
+    color: white;
+    font-family: 'Overpass';
+}
+
+#div_reg #but_submit{
+    padding: 7px;
+    width: 100px;
+	background-color: #d2691e;
+	border: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+#div_forgot{
+    border: 3px solid #4e5965;
+    width: 400px;
+	background-color: white;
+}
+
+#div_forgot div{
+    margin-top: 5px;
+    padding: 5px;
+	text-align: center;
+}
+
+#div_forgot h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #778899;
+    color: white;
+    font-family: 'Overpass';
+}
+#div_forgot #but_reset{
+    padding: 7px;
+    width: 100px;
+	background-color: #8c8c8c;
+	border: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+	
+#password-validation {
+  display:none;
+  background-color: #F8F8FF;
+  position: relative;
+  padding: 3px;
+  margin-top: 3px;
+}
+#password-validation h3{
+	font-family: 'Overpass';
+}
+	
+#password-validation p {
+    padding: 10px;
+	font-size: 12px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -20px;
+    content: ' \2714';
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -20px;
+    content: ' \2716';
+}
+

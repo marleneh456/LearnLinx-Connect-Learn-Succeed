@@ -1,7 +1,3 @@
---users.sql
-
---This is where it load all the users infomation
-
 #DROP DATABASE IF EXISTS LEARN_LINX;
 
 CREATE DATABASE IF NOT EXISTS LEARN_LINX;

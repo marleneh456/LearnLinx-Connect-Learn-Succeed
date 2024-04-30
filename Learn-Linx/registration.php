@@ -1,6 +1,6 @@
 <!-- Update registration.php -->
 
-<!-- Where I store the password correctly after creating new account -->
+<!-- Where it store the password correctly after creating new account -->
 
 <!DOCTYPE html>
 <html>

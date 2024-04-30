@@ -1,5 +1,6 @@
 <!-- Update index.php -->
 
+<!-- Remove the password fields -->
 
 <!DOCTYPE html>
 <html>

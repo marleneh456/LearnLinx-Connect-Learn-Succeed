@@ -1,4 +1,4 @@
-// script.js
+//script.js
 
 // This where to load videos and quizzes
 
@@ -86,16 +86,16 @@ function displayQuiz(quizData) {
     resultContainer.innerHTML = '';
 
     for (var i = 0; i < quizData.length; i++) {
-        var quiz_question = quizData[i];
+        var question = quizData[i];
         var questionElement = document.createElement('div');
         questionElement.classList.add('question'); // Add class for question styling
-        questionElement.textContent = quiz_question.question;
+        questionElement.textContent = question.question;
 
         var optionsContainer = document.createElement('div');
         optionsContainer.classList.add('options'); // Add class for options styling
 
         for (var j = 0; j < question.options.length; j++) {
-            var option = quiz_question.options[j];
+            var option = question.options[j];
             var optionLabel = document.createElement('label');
             optionLabel.classList.add('option'); // Add class for option styling
 

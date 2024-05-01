@@ -17,7 +17,7 @@ session_start();
 
 $servername = "localhost";
 $username = "root";
-$password = ""; // Ensure your MySQL password is set correctly
+$password = ""; 
 $database = "learn_linx";
 
 // Create connection

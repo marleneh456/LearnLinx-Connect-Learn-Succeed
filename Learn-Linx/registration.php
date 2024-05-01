@@ -60,7 +60,7 @@ if (isset($_POST['but_submit'])) {
                   </div>";
         }
     }
-}
+} else {
 ?>
 
 <div class="background">
@@ -114,6 +114,11 @@ if (isset($_POST['but_submit'])) {
             <p class="link">Already have an account? <a href="index.php">Login here</a></p>
         </div>
     </form>
+	
+<?php
+}
+?>	
+	
 </div>
 
 <script src="password-validation.js"></script>

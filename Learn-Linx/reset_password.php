@@ -1,6 +1,6 @@
-<!-- Update reset_password.php -->
+<!-- Update reset_passsword.php -->
 
-<!-- This is for the user who forgot their password and store the password correctly-->
+<!-- Where it store the password with more security after resetting a new password -->
 
 <!DOCTYPE html>
 <html>
@@ -34,14 +34,14 @@ if (isset($_POST['but_reset'])) {
 
     $new_password = preg_replace("/[^a-zA-Z0-9]/", "", $new_password); // Store only the numbers from the password
 	
-	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+	$hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 	
     $sql_query = "SELECT * FROM Users WHERE username = '$uname_email' OR email = '$uname_email'";
     $result = mysqli_query($conn, $sql_query);
 
     if (mysqli_num_rows($result) > 0) {
         // Username or email found in the database
-        $sql_query = "UPDATE Users SET password = '$new_password' WHERE username = '$uname_email' OR email = '$uname_email'";
+        $sql_query = "UPDATE Users SET password = '$hashed_password' WHERE username = '$uname_email' OR email = '$uname_email'";
         $result = mysqli_query($conn, $sql_query);
 
         if ($result) {

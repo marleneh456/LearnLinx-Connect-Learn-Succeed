@@ -1,5 +1,7 @@
 <!-- Update index.php -->
 
+<!-- This where anyone type after registration and rest your account -->
+
 <!DOCTYPE html>
 <html>
 <head>

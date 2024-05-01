@@ -1,7 +1,5 @@
 <!-- Update index.php -->
 
-<!-- Remove the password fields -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,26 +15,28 @@ session_start();
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = ""; // Ensure your MySQL password is set correctly
 $database = "learn_linx";
 
+// Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
+// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
 if (isset($_POST['but_submit'])) {
-    $uname = htmlspecialchars($_POST['txt_uname']);
-    $email = htmlspecialchars($_POST['txt_email']);
+    $uname = mysqli_real_escape_string($conn, $_POST['txt_uname']); // Sanitize input
+    $email = mysqli_real_escape_string($conn, $_POST['txt_email']); // Sanitize input
     $password = $_POST['txt_pwd'];
 
     if ($uname != "" && $password != "" && $email != "") {
         $sql_query = "SELECT * FROM Users WHERE username = '$uname' AND email = '$email'";
         $result = mysqli_query($conn, $sql_query);
-        $row = mysqli_fetch_array($result);
 
-        if ($row) {
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
             if (password_verify($password, $row['password'])) {
                 $_SESSION['uname'] = $uname;
                 $_SESSION['name'] = $row['name'];
